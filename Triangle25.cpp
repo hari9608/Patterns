@@ -12,11 +12,11 @@ int main()
     for(int row=1; row<=N; row++)
     {
         int col;
-        if(row > 1)
+        if(row > 1)                                             // the first row doesn't contain any space 
         {
-            int bs = row-2;
-            for(int spa=1; spa<=(pow(bs, 2) + bs + 1); spa++) 
-                cout << " ";
+            int bs = row-2;                                     // n = row - 2 is used to find no of spaces before starting the eac row 
+            for(int spa=1; spa<=(pow(bs, 2) + bs + 1); spa++)   // spa before start printing every row in series of 0, 1, 3, 7,.. 
+                cout << " ";                                    // (pow(n, 2) + n + 1) is used to find the series of each row if row is greater than 1
         }
     
     
@@ -24,7 +24,7 @@ int main()
         {
             int coliN;
             
-            for( coliN=1; coliN<row; coliN++)
+            for( coliN=1; coliN<row; coliN++)                   // coliN is used to print the each row contain row+1-col time values  1 to row  
                 cout << coliN << " ";
                 
             cout << coliN;
@@ -42,11 +42,3 @@ int main()
 
     return 0;
 }
-/*
-ENTER THE NO OF TRIANGLE: 5
-1 1  1    1      1
- 1 21 2  1 2    1 2
-   1 2 31 2 3  1 2 3 
-       1 2 3 41 2 3 4
-             1 2 3 4 5
-             */
